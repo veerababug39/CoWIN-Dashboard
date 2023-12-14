@@ -36,7 +36,6 @@ class CowinDashboard extends Component {
     const response = await fetch(covidVaccinationDataApiUrl)
     if (response.ok === true) {
       const fetchedData = await response.json()
-
       const updatedData = {
         last7DaysVaccination: fetchedData.last_7_days_vaccination.map(
           eachDayData => ({
@@ -45,7 +44,6 @@ class CowinDashboard extends Component {
             dose2: eachDayData.dose_2,
           }),
         ),
-
         vaccinationByAge: fetchedData.vaccination_by_age.map(range => ({
           age: range.age,
           count: range.count,

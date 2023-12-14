@@ -16,15 +16,15 @@ const VaccinationCoverage = props => {
     <div className="vaccination-by-coverage-container">
       <h1 className="vaccination-by-coverage-heading">Vaccination Coverage</h1>
       <BarChart
-        width={1000}
-        height={300}
+        width={900}
+        height={400}
         data={vaccinationCoverageDetails}
         margin={{
           top: 5,
         }}
       >
         <XAxis
-          dataKey="VaccineDate"
+          dataKey="vaccineDate"
           tick={{
             stroke: '#6c757d',
             strokeWidth: 1,
